@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home &middot; IDE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.2/ace.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="main">
+        <div class="tree">
+            <div class="mode_selector">
+                <button class="mode_select">Select Mode</button>
+            </div>
+        </div><div class="code">
+            <div class="head">
+                <div class="tooltip">
+                    <a class="_file"><span>File</span></a>
+                    <a class="_edit"><span>Edit</span></a>
+                    <a class="_view"><span>View</span></a>
+                    <a class="_help"><span>Help</span></a>
+                </div>
+                <div class="options">
+                    <div class="__file">
+                        <div data-option="open">Open</div>
+                        <div data-option="save">Save</div>
+                        <div data-option="save_as">Save As</div>
+                        <div data-option="close">Close</div>
+                    </div>
+                    <div class="__edit">
+                        <div>asd</div>
+                        <div>asdasd</div>
+                        <div>asdasdasd</div>
+                    </div>
+                    <div class="__view">
+                        <div>asd</div>
+                        <div>asdasd</div>
+                        <div>asdasdasd</div>
+                    </div>
+                    <div class="__help">
+                        <div>asd</div>
+                        <div>asdasd</div>
+                        <div>asdasdasd</div><div>asd</div>
+                        <div>asdasd</div>
+                        <div>asdasdasd</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="tabs tooltip">
+                    <div class="active">
+                        <span>Untitled</span>
+                    </div>
+                    <section class="add_tab">+</section>
+                </div>
+                <div class="editor">
+                    <div class="untitled untitled_file">
+                        <ul class="fileTypes">
+                            <li class="html"><a data-filetype="html" class="newfile file-html">HTML</a></li>
+                            <li class="javascript"><a data-filetype="js" class="newfile file-js">JavaScript</a></li>
+                            <li class="css"><a data-filetype="css" class="newfile file-css">CSS</a></li>
+                            <li class="php"><a data-filetype="php" class="newfile file-php">PHP</a></li>
+                            <li class="svg"><a data-filetype="svg" class="newfile file-svg">SVG</a></li>
+                            <li class="xml"><a data-filetype="xml" class="newfile file-xml">XML</a></li>
+                            <li class="text"><a data-filetype="txt" class="newfile file-txt">Plain Text</a></li>
+                            <li class="json"><a data-filetype="json" class="newfile file-json">JSON</a></li>
+                            <li class="ruby"><a data-filetype="rb" class="newfile file-rb">Ruby</a></li>
+                            <li class="html_ruby"><a data-filetype="erb" class="newfile file-erb">HTML Ruby</a></li>
+                            <li class="coffee"><a data-filetype="coffee" class="newfile file-coffee">CoffeeScript</a></li>
+                            <li class="python"><a data-filetype="py" class="newfile file-py">Python</a></li>
+                            <li class="apache_conf"><a data-filetype="htaccess" class="newfile file-htaccess">Apache Conf</a></li>
+                            <li class="autohotkey"><a data-filetype="ahk" class="newfile file-ahk">AutoHotkey</a></li>
+                            <li class="c_cpp"><a data-filetype="cpp" class="newfile file-cpp">C++</a></li>
+                            <li class="clojure"><a data-filetype="clojure" class="newfile file-clojure">Clojure</a></li>
+                            <li class="coldfusion"><a data-filetype="cfm" class="newfile file-cfm">ColdFusion</a></li>
+                            <li class="csharp"><a data-filetype="cs" class="newfile file-cs">C#</a></li>
+                            <li class="dart"><a data-filetype="dart" class="newfile file-dart">Dart</a></li>
+                            <li class="erlang"><a data-filetype="erl" class="newfile file-erl">Erlang</a></li>
+                            <li class="fsharp"><a data-filetype="fs" class="newfile file-fs">F#</a></li>
+                            <li class="golang"><a data-filetype="go" class="newfile file-go">Go</a></li>
+                            <li class="groovy"><a data-filetype="groovy" class="newfile file-groovy">Groovy</a></li>
+                            <li class="htaccess"><a data-filetype="htaccess" class="newfile file-htaccess">Plain Text</a></li>
+                            <li class="jade"><a data-filetype="jade" class="newfile file-jade">Jade</a></li>
+                            <li class="java"><a data-filetype="java" class="newfile file-java">Java</a></li>
+                            <li class="jsx"><a data-filetype="jsx" class="newfile file-jsx">JSX</a></li>
+                            <li class="latex"><a data-filetype="latex" class="newfile file-latex">Latex</a></li>
+                            <li class="less"><a data-filetype="less" class="newfile file-less">LESS</a></li>
+                            <li class="liquid"><a data-filetype="liquid" class="newfile file-liquid">Liquid</a></li>
+                            <li class="lsl"><a data-filetype="lsl" class="newfile file-lsl">Linden Scripting Language</a></li>
+                            <li class="lua"><a data-filetype="lua" class="newfile file-lua">Lua</a></li>
+                            <li class="markdown"><a data-filetype="markdown" class="newfile file-markdown">MarkDown</a></li>
+                            <li class="ocaml"><a data-filetype="ocaml" class="newfile file-ocaml">OCaml</a></li>
+                            <li class="perl"><a data-filetype="pl" class="newfile file-pl">Perl</a></li>
+                            <li class="scala"><a data-filetype="scala" class="newfile file-scala">Scala</a></li>
+                            <li class="scss"><a data-filetype="scss" class="newfile file-scss">SCSS</a></li>
+                            <li class="sql"><a data-filetype="sql" class="newfile file-sql">SQL</a></li>
+                            <li class="sh"><a data-filetype="sh" class="newfile file-sh">Shell</a></li>
+                            <li class="tcl"><a data-filetype="tcl" class="newfile file-tcl">TCL</a></li>
+                            <li class="textile"><a data-filetype="textile" class="newfile file-textile">Textile</a></li>
+                            <li class="vbscript"><a data-filetype="vbs" class="newfile file-vbs">VBScript</a></li>
+                            <li class="yaml"><a data-filetype="yaml" class="newfile file-yaml">YAML</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="misc">
+        <div class="tooltip_box">
+            asddas
+        </div>
+        <div class="prompt">
+            <div class="core">
+                <div class="close">
+                    &Cross;
+                </div>
+                <section>
+                asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>asd<br>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
