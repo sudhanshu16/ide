@@ -24,7 +24,11 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #61666D;
+	opacity: 0.9;
+}
+ul{
+	list-style: none;
+	padding:0;
 }
 
 #editor{
@@ -64,6 +68,26 @@ button:hover{
 	border-right: 1px solid #444;
 	vertical-align: top;
 	position: relative;
+	font-weight: 600;
+	color:#9D9D9D;
+	font-size: 15px;
+}
+.tree>div{
+	margin:7px;
+}
+.tree li{
+	opacity: 0.3;
+	color:#fff;
+	padding:0px 0px 0px 20px;
+	cursor: pointer;
+}
+.tree li:hover{
+	opacity: 0.4;
+}
+.tree li#dir{
+	background: url(../img/right.png) no-repeat;
+	background-size: auto 90%;
+	background-position: left 100%;
 }
 .code{
 	width: calc(100% - 251px)
@@ -122,6 +146,9 @@ button:hover{
     padding-left: 10px;
     text-overflow: ellipsis;
     width: 120px;
+    position: absolute;
+	top:50%;
+	transform:translateY(-50%);
     display: block;
     overflow: hidden;
 }
@@ -228,6 +255,7 @@ button:hover{
 	left:0;
 	z-index: 99;
 	background: rgba(0,0,0,0.1);
+	display: none;
 }
 .prompt>.core{
 	width: 50%;
@@ -251,9 +279,8 @@ button:hover{
 	color:#666;
 }
 .prompt section{
-	margin-top:30px;
+	margin:30px 6px 0px 15px;
 	overflow: auto;
-	margin-right: 6px;
 	height: calc(100% - 30px)
 }
 .prompt section::-webkit-scrollbar {
@@ -264,6 +291,15 @@ button:hover{
 	background: rgba(0,0,0,0.2);
 	border-radius: 5px;
 
+}
+.prompt section iframe{
+	text-align: center;
+	margin:0;
+	border:0;
+	width:100%;
+	top:50%;
+	position: relative;
+	transform: translateY(-50%);
 }
 /* --- Editor Stylings ---- */
 .ace-chrome .ace_marker-layer .ace_active-line {
